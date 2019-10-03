@@ -1,0 +1,51 @@
+<!doctype html> 
+<html>
+	<head>
+		<script src="scripts/script.js" async></script>
+		<link rel="stylesheet" href="styles/style.css">
+	</head>
+	<body>
+	<div id="wrapper">
+		<div class="header">
+			<a href="index.html"><img src="coffeeguy.jpg" border="0"></a>
+			<h1><a href="index.html" id="title">Opinionr</a></h1>
+		</div>
+		<br>
+			<h2>Enter an opinion</h2>
+			<form method="post" action="http://localhost:8080/assignment4/home">
+				What's your opinion? <br>
+				<input type="text" id="assertion" name="assertion:" style="width: 450px"><br><br>
+				Why?<br>
+				<input name="justification" id="justification" style="height:150px; width:450px;"></textarea>
+				<br><br>
+				<input type="submit" value="Submit" onClick="return isEmpty()">
+			</form>
+			<hr width="450">
+			<h2>Other users said:</h2>
+			<blockquote>
+			<b>Civ VI is better than Civ V</b>
+			<p>Though Civ VI has problems with sluggish production relative to tech tree progression, the vanilla release is comparable to Civ V Brave New World.</p>
+			</blockquote>
+			<table border="1">
+				<tr>
+					<td>
+						<div id = "voting">
+							<form>
+								<input type="radio" name="vote" value="Convinced">Convinced
+								<input type="radio" name="vote" value="Unsure">Unsure
+								<input type="radio" name="vote" value="Disagree">Disagree
+								<br>
+								<input type="submit" value="Vote" onclick="voteButton()">
+							</form>
+						</div>
+					</td>
+					<td>
+						<div id = "votes">
+							Convinced: Unsure: Disagree:
+						</div>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</body>
+</html>
